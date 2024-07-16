@@ -1,0 +1,105 @@
+/* Selectorr Id se usa "#" */
+/* Selector clase se usa "." */
+
+#selectorId {
+    color: #8c54fb 
+}
+
+.selectorClase{
+    color:#e11d48
+}
+
+h4{
+    background-color: #8c54fb;
+}
+
+.contenedor p {
+    color: #e11d48;
+}
+
+.caja{
+    width: 100px;
+    height: 100px;
+    background-color: #6b7280;
+    border-radius: 1rem; /* 1rem = 16px por defecto */
+    text-align: center;
+}
+
+.caja-mediana{
+    width: 200px;
+    height: 200px;
+    background-color: #6b7280;
+    border-radius: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 10px;
+}
+
+.caja-grande{
+    width: 300px;
+    height: 300px;
+    background-color: #8c54fb;
+    border-radius: 1rem; /* 1rem = 16px por defecto */
+    text-align: center;
+}
+
+.em{
+    font-size: 2em;
+}
+
+.rem{
+    font-size: 2rem;
+}
+
+.porcentaje{
+    width: 50%;
+    height: 50%;
+    background-color: #8c54fb;
+}
+
+.vh{
+    height: 10vh;
+    background-color: #8c54fb;
+}
+
+.vw{
+    width: 10vw;
+    background-color: #8c54fb;
+}
+
+.bg-color{
+    background-color: #e11d48;
+}
+
+.bg-img{
+    background-image: url('./img/bg-pattern.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-repeat{
+    background-image: url('./img/bg-repeat.png');
+    background-repeat: no-repeat;
+}
+
+.bg-attach{
+    background-image: url('./img/bg-pattern.jpg');
+    background-attachment: fixed;
+}
+
+.bg-position{
+    background-image: url('./img/bg-pattern.jpg');
+    background-size: contain;
+    background-position: center;
+}
+
+.bg-size{
+    background-image: url('./img/messi.webp');
+    background-position: center;
+    background-size: cover;
+
+}
+
+.color p{
+    color: crimson;
+}
