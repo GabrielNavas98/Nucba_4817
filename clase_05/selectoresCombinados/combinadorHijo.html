@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Selecciona solo los <p> que son hijos directos de <div> */
+      .padre > p {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="padre">
+      <p>Este es un párrafo hijo directo de un div.</p>
+      <div>
+        <p>
+          Este párrafo no será afectado porque está anidado dentro de otro div.
+        </p>
+      </div>
+    </div>
+
+    <p>Este párrafo no será afectado.</p>
+  </body>
+</html>

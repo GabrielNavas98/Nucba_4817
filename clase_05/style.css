@@ -79,7 +79,7 @@ h4{
 
 .bg-repeat{
     background-image: url('./img/bg-repeat.png');
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 }
 
 .bg-attach{
@@ -102,4 +102,86 @@ h4{
 
 .color p{
     color: crimson;
+}
+
+.caja-shadow{
+    background: #8c54fb;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.offset-XY{
+    box-shadow: 10px 10px;
+}
+
+.blurRadius{
+    box-shadow: 10px 10px 5px;
+
+}
+
+.spreadRadius{
+    box-shadow: 10px 10px 5px 5px;
+}
+
+.opacity{
+    box-shadow: 10px 10px 5px 5px rgba(220, 20, 60, 0.84);
+}
+.inset{
+    box-shadow: inset 10px 10px 5px 5px rgba(220, 20, 60, 0.84) ;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+.font-fa{
+    font-family: "Comic Neue", cursive;
+    font-weight: 700;
+}
+
+.font-we{
+    font-weight:lighter;
+}
+
+.font-st{
+    font-style: italic;
+}
+
+.font-sz{
+    font-size: 20px;
+}
+.letter-spa{
+    letter-spacing: 20px;
+}
+
+.word-spa{
+    word-spacing: 20px;
+}
+
+.lines{
+    line-height: 20px;
+}
+
+.align{
+    text-align:end ;
+}
+
+.text-transform{
+    text-transform: lowercase;
+}
+
+.deco{
+    text-decoration: line-through;
+}
+
+.list-style{
+    list-style-type: none;
+}
+.listType{
+    list-style-type:lower-alpha;
+    list-style-position: outside;
+    background: #e11d48;
+}
+
+.list-img{
+    list-style-image: url('./img/messi-list-img.jpg');
+    list-style-position: inside;
 }
