@@ -1,0 +1,131 @@
+/* overflow */
+.overflow-box{
+    width: 100px;
+    height: 100px;
+    background: crimson;
+    border-radius: 1rem ;
+    /* overflow: visible; */
+}
+
+.hidden{
+    overflow: hidden;
+}
+
+.scroll{
+    overflow: scroll;
+}
+
+.auto{
+    overflow: auto;
+}
+
+/* Padding */
+
+.padding{
+    width: 100px;
+    border-radius: 1rem ;
+    background-color: crimson;
+    padding: 10px 5px 20px 15px;
+}
+
+
+
+/* Border  */
+
+.solid{
+    border: 5px solid crimson;
+    padding: 5px;
+    margin-bottom: 32px;
+}
+
+.dashed{
+    border: 5px dashed crimson;
+    padding: 5px;
+    margin-bottom: 32px;
+}
+
+.dotted{
+    border: 5px dotted crimson;
+    padding: 5px;
+    margin-bottom: 2rem ;
+}
+
+
+.double{
+    border: 5px double crimson;
+    padding: 5px;
+}
+
+.radius{
+    border-radius: 16px 10px 30px 40px;
+    background-color: crimson;
+    text-align: center;
+}
+
+/* margin */
+.box{
+    width: 100px;
+    height: 100px;
+    background: crimson;
+    border-radius: 1rem;
+}
+
+.margin{
+    margin: 10px 5px 20px 15px;
+
+    /* margin-top: 10px;
+    margin-right: 5px;
+    margin-bottom: 20px;
+    margin-left: 15px ; */
+
+    /*Arriba y abajo / derecha e izquierda*/
+    /* margin: 10px 20px; */ 
+}
+
+/* Para mostrar cuanto ocupa un p por defecto */
+.caja-ej{
+    background: crimson;
+}
+
+/* box sizing */
+
+
+/* Inline / Block */
+/* .block{
+    /* se puede cambiar su funcion(display) de la siguiente manera */
+    /* display: inline; */
+.inline{
+    border: 1px solid cadetblue;
+    padding: 1rem;
+    /* display: block; */
+}
+
+/*  */
+
+/* positiions */
+
+
+
+.relative{
+    position: relative;
+    background-color: cadetblue;
+    left: 500px;
+    bottom: 50px;
+}
+
+.absolute-container{
+    /* height: 100px; */
+    position: relative;
+}
+
+.absolute{
+    background: cadetblue;
+    position: absolute;
+    left: 50px;
+}
+.fixed{
+    background: cadetblue;
+    position: fixed;
+    bottom: 10px;
+    right:10px;
+}
