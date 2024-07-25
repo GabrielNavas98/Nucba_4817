@@ -1,0 +1,277 @@
+/* Cajas que vamos a usar para los ejemplos de clase*/
+.caja-flex {
+    background: #8c54fb;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+  }
+
+  .container{
+    background-color: #4d4a4a;
+    padding: 10px;
+    border-radius: 1rem;
+  }
+  
+  /*Flex-direction*/
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  
+  .reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .col-reverse {
+    flex-direction: column-reverse;
+  }
+
+  /*Flex-wrap*/
+
+  .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 250px;
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+  
+  .no-wrap {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    max-width: 250px;
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+  
+  /*Justify-content*/
+  
+  .jc-start {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  
+  .jc-end {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .jc-center {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .jc-between {
+    display: flex;
+    justify-content: space-between;
+  }
+  .jc-around {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .jc-evenly {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  /* align items */
+  .container-column {
+    height: 350px;
+    background-color: #4d4a4a;
+    border-radius: 1rem;
+    padding: 1rem;
+    max-width: 500px;
+  }
+  
+  .ai-start {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .ai-end {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+  }
+  
+  .ai-center {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .ai-stretch {
+    display: flex;
+    align-items: stretch;
+    gap: 15px;
+  }
+  
+  .caja-flex-stretch {
+    background: crimson;
+    width: 100px;
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+  
+  .ai-baseline {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  
+  .caja-flex-baseline {
+    width: 100px;
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+  
+  .baseline-1 {
+    padding-top: 30px;
+    background: crimson;
+  }
+  .baseline-2 {
+    padding-top: 80px;
+    background: #8c54fb;
+  }
+  .baseline-3 {
+    padding-top: 50px;
+    background: crimson;
+  }
+  
+
+  /* align content */
+
+  .container-column-content {
+    height: 350px;
+    background-color: #4d4a4a;
+    border-radius: 1rem;
+    padding: 1rem;
+    max-width: 330px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .ac-start {
+    align-content: flex-start;
+  }
+  
+  .ac-end {
+    align-content: flex-end;
+  }
+  
+  .ac-center {
+    align-content: center;
+  }
+  
+  .ac-space-between {
+    align-content: space-between;
+  }
+  
+  .ac-space-around {
+    align-content: space-around;
+  }
+  
+  .ac-stretch {
+    align-content: stretch;
+  }
+  .stretch {
+    width: auto;
+  }
+  
+  /* order */
+
+  .order-1 {
+    order: 2;
+  }
+  .order-2 {
+    order: 3;
+  }
+  .order-3 {
+    order: 1;
+  }
+  
+  /* Grow */
+  .grow-1 {
+    flex-grow: 2;
+  }
+  
+  /* shrink */
+  .shrink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .container-shrink {
+    background-color: #4d4a4a;
+    border-radius: 1rem;
+    max-width: 300px;
+    padding: 1rem;
+  }
+  
+  .shrink-1 {
+    flex-shrink: 0;
+  }
+  .shrink-2 {
+    flex-shrink: 2;
+  }
+  .shrink-3 {
+    flex-shrink: 1;
+  }
+  
+  /* basis */
+  .basis {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .basis-1 {
+    flex-basis: 200px;
+  }
+  .basis-2 {
+    flex-basis: 500px;
+  }
+  
+  .basis-3 {
+    flex-basis: 150px;
+  }
+  
+  /* align-self */
+  .self {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .self-1 {
+    align-self: flex-start;
+  }
+  
+  .self-2 {
+    align-self: center;
+  }
+  
+  .self-3 {
+    align-self: flex-end;
+  }
+  
