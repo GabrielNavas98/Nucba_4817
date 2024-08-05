@@ -1,0 +1,173 @@
+/*============== FUENTE ===================*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/*================= VARIABLES =================*/
+:root {
+  /* bg-colors */
+  --background: #02050e;
+  --primary: #1e50ff;
+  --secondary: #272d37;
+  --btn-bg: #050d26;
+  --bg-azul-10: #e9eeff;
+  --bg-white: #fff;
+  --bg-electric: #f0fbff;
+  --nav-bg: #0f1525;
+
+  /* Text colors */
+  --text-gray: #adb9c7;
+  --text-white: #f3f4f6;
+
+  /* Decoration */
+  --fire: #ff6d00;
+  --electric: #64d3ff;
+}
+
+/*================= RESET ====================*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+main {
+  padding: 0 80px;
+  margin-top: 60px;
+}
+
+/* Selectores */
+.lista-ejemplo {
+  list-style-type: none;
+}
+
+.item {
+  padding: 10px;
+  background-color: #f0f0f0;
+  margin: 5px 0;
+}
+
+.especial {
+  background-color: #c0c0ff;
+}
+/* Box Model */
+.caja {
+  width: 200px;
+  height: 100px;
+  padding: 20px;
+  border: 5px solid #000;
+  margin: 10px;
+  background-color: var(--primary);
+}
+
+.content-box {
+  box-sizing: content-box;
+}
+
+.border-box {
+  box-sizing: border-box;
+  background-color: var(--electric);
+}
+
+/* Flexbox */
+.contenedor-flex {
+  padding: 10px;
+  height: 500px;
+  border-radius: 10px;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.item-flex {
+  background-color: var(--fire);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+}
+
+/* Propiedades Básicas */
+.texto-ejemplo {
+  color: #333;
+  background-color: #f0f0f0;
+  font-size: 18px;
+  font-weight: bold;
+  border: 2px dashed #000;
+  margin: 10px;
+  padding: 20px;
+}
+
+/* Position */
+
+h1 {
+  position: fixed;
+  top: 0;
+}
+
+.contenedor-position {
+  position: relative;
+  height: 200px;
+  background-color: #f0f0f0;
+}
+
+.itemPS {
+  width: 50px;
+  height: 50px;
+  background-color: #ff8080;
+  position: absolute;
+}
+
+.position1 {
+  top: 10px;
+  left: 10px;
+}
+
+.position2 {
+  top: 10px;
+  right: 10px;
+}
+
+.position3 {
+  bottom: 10px;
+  left: 10px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: crimson;
+  border-radius: 1rem;
+}
+
+.container {
+  background-color: var(--background);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.relative {
+  position: relative;
+  background-color: cadetblue;
+  left: 500px;
+  bottom: 50px;
+}
+
+.absolute-container {
+  position: relative;
+}
+
+.absolute {
+  background: cadetblue;
+  position: absolute;
+  left: 50px;
+}
+
+.fixed {
+  background: cadetblue;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
