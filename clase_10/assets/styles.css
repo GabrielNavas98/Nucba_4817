@@ -1,0 +1,144 @@
+/* ============ FUENTE ========== */
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* ============ RESET ========== */
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+
+/* ============ selectores ========== */
+
+/* .  (punto )=> clases   */
+/* #  (numeral )=> id   */
+/* main  (etiqueta)=> etiquetas   */
+
+#selectores{
+    background-color: cadetblue;
+    padding: 10px;
+    margin-top: 60px;
+}
+
+.lista-ejemplo{
+    list-style-type: none ;
+}
+
+.item{
+    background-color: crimson;
+    padding: 10px;
+    margin: 5px 0;
+    font-weight: 800;
+}
+
+a, p{
+    border: 1px solid red;
+}
+
+.subtitulo{
+    color: red;
+}
+
+.active{
+    background-color: blue;
+    color: #fafafa;
+    font-weight: 200;
+}
+
+/* ============ Box sizing ========== */
+/* Para que no nos modifique el border y el padding el ancho y alto de la caja  */
+
+.caja{
+    width: 200px;
+    height: 200px;
+    background-color: rgba(220, 20, 60, 0.435);
+    margin: 10px;
+    padding: 20px;
+    border: 2px solid black;
+    font-size: 10px;
+}
+
+.content-box{
+    box-sizing: content-box; /*Por defecto*/
+    font-size: 3rem;
+    overflow: hidden;
+}
+
+.border-box{
+    box-sizing: border-box;
+}
+
+/* ============ FLEX ========== */
+
+.flex-container{
+    background-color: #02050e;
+    height: 800px;
+    padding: 10px;
+    color: #fafafa;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px ;
+}
+
+.item-flex{
+    background-color: #ff6d00;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ============ Positions ========== */
+
+h1{
+    position: fixed; /*Fijo pa siempre*/
+    top: 0;
+    background-color: #ff6d00;
+    width: 100%;
+}
+
+.container{
+    background-color: #02050e;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: crimson;
+    border-radius: 1rem;
+}
+
+.relative{
+    background-color: #ff6d00;
+    position: relative;
+    left: 500px;
+    bottom: -50px;
+}
+
+.absolute-container{
+    position: relative;
+}
+
+.absolute{
+    position: absolute;
+    background-color: #ff6d00;
+    top: 50px;
+    left: 50px;
+
+}
+
+.fixed{
+    position: fixed;
+    background-color: cadetblue;
+    bottom: 0;
+}

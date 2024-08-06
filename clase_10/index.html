@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Clase de Repaso CSS HTML</title>
+        <link rel="stylesheet" href="./assets/styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Clase de Repaso HTML y CSS</h1>
+        </header>
+        <main>
+
+            <section id="selectores">
+                <ul class="lista-ejemplo">
+                    <li class="item">Item 1</li>
+                    <li class="item active">Item 2</li>
+                    <li class="item">Item 3</li>
+                </ul>
+                <a>Hola soy una etiquta en linea</a>
+                <p>Soy una etiqueta en bloque</p>
+                <h3 class="subtitulo" style="color: green; background-color: rgba(255, 230, 0, 0.495);">Tengo estilos en linea</h3> <!--Especificidad gana styles en linea-->
+            </section>
+
+
+            <section id="box-sizing">
+
+                <h2>Box model</h2>
+                <div class="caja content-box">Caja con content-box</div>
+                <div class="caja border-box">Caja con border-box</div>
+
+            </section>
+
+            <section>
+
+                <h2>FlexBox</h2>
+                <div class="flex-container">
+                    <div class="item-flex">1</div>
+                    <div class="item-flex">2</div>
+                    <div class="item-flex">3</div>
+                </div>
+
+            </section>
+
+            <section>
+                <h2>Position Relative</h2>
+                <div class="container">
+                    <div class="box"></div>
+                    <div class="box relative"></div>
+                    <div class="box"></div>
+                </div>
+
+                <h2>Position Absolute</h2>
+                <div class="container absolute-container">
+                    <div class="box"></div>
+                    <div class="box absolute"></div>
+                    <div class="box"></div>
+                  </div>
+            </section>
+            
+        </main>
+        <footer class="fixed">
+            <h2>Soy el footer</h2>
+        </footer>
+    </body>
+</html>
