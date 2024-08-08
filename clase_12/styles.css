@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+  /* bg colors */
+  --black: #02050e;
+  --grey: #272d37;
+  --white: #f0fbff;
+  --blue: #0c1221;
+  --red: #b21c05;
+  --green: #168208;
+  --yellow: #ffff00;
+  --orange: #f69d4c;
+  --lightblue: #3f87a6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  background-color: var(--black);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  height: 90%;
+  width: 90%;
+  background-color: var(--grey);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.caja {
+  width: 200px;
+  height: 200px;
+  background: var(--blue);
+  color: var(--white);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* =========== GRADIENTES ============ */
+.caja1 {
+  background: linear-gradient(#f69d4c, #3f87a6);
+  /* background: repeating-linear-gradient(var(--orange), var(--lightblue) 50px); */
+  /* background: linear-gradient(90deg,black, white); */
+  /* background: radial-gradient(black, white); */
+  /* background: rgb(63,94,251); */
+  /* background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%); */
+  /* background: linear-gradient(to right, white, var(--green), blue,); */
+}
+
+/* PARA TEXTOS */
+
+.caja2 {
+  background: linear-gradient(to right, white, green);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-weight: 800;
+  font-size: 3rem;
+}
+/* PARA Ambos */
+
+.caja3 {
+  background: #1e9600;
+  background: -webkit-linear-gradient(to right, #ff0000, #fff200, #1e9600);
+  background: linear-gradient(to right, #ff0000, #fff200, #1e9600);
+}
+
+.caja3 span {
+  font-weight: 800;
+  font-size: 2rem;
+  background: #20002c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #cbb4d4,
+    #20002c
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #cbb4d4,
+    #20002c
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/* MEDIAS QUERY */
+/* de 1200px para abajo */
+@media (max-width: 1200px) {
+  body {
+    background: red;
+  }
+
+  .container {
+    background-color: yellow;
+    flex-direction: column;
+  }
+
+  .caja {
+    background: red;
+  }
+}
+
+/* de 992px para abajo */
+@media (max-width: 992px) {
+  body {
+    background: cadetblue;
+  }
+
+  .container {
+    background-color: #168208;
+  }
+}
+
+/* de 768px para abajo */
+@media (max-width: 768px) {
+  .caja1 {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+  }
+
+  .caja2 {
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+  }
+  .caja3 span {
+    font-size: 3rem;
+  }
+}
+
+
+/* de 576px para abajo */
+@media (max-width: 576px) {
+.container{
+  width: 100%;
+  height: 100vh;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  flex-direction: row;
+}
+
+.caja{
+  width: 20px;
+}
+
+}

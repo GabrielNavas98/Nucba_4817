@@ -35,7 +35,7 @@
 }
 
 /*================= HEADER ====================*/
-header{
+ header{
     background-color: var(--secondary);
     display: flex;
     justify-content: space-between;
@@ -43,8 +43,15 @@ header{
     padding: 0 30px;
     height: 65px;
     position: fixed;
-    width: 100%; /*para que ocupe el 100%*/
-}
+    width: 100%;
+    /*STICKY*/
+    /*
+    position: sticky;
+    z-index: 2;
+    top:0 */;
+
+} 
+
 
 .navbar, .navbar-list{
     display: flex;
