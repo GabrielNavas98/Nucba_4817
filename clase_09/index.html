@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing Page NFT</title>
     <link rel="stylesheet" href="./assets/styles.css" />
+    <link rel="stylesheet" href="./assets/mediaqueries.css">
   </head>
   <body>
     <!--Header-->
@@ -13,6 +14,10 @@
       <img src="./assets/img/logo.png" alt="Logo nucba" class="logo" />
       <!--Navbar-->
       <nav class="navbar">
+        <label for="menu-toggle" class="menu-label">
+          <img src="./assets/img/menu.png" alt="menu icon">
+        </label>
+        <input type="checkbox" id="menu-toggle">
         <ul class="navbar-list">
           <li><a href="#hero" class="active">Home</a></li>
           <li><a href="#discover">Descubre</a></li>
@@ -20,12 +25,98 @@
           <li><a href="#">Youtube</a></li>
           <li><a href="#">Contactanos</a></li>
         </ul>
-        <!--Carrito-->
-        <img
+        <!--Cart Toggle-->
+        <label for="cart-toggle">
+          <img
           src="./assets/img/cart-icon.svg"
           alt="Logo carrito"
           class="cart-icon"
         />
+        </label>
+        <input type="checkbox" id="cart-toggle">
+        <!-- Carrito list -->
+        <!-- <p>hola</p> -->
+        <div class="cart">
+          <h2>Tus NFTs</h2>
+          <!-- Productos en carrito -->
+           <div class="cart-item">
+            <img src="./assets/img/cart/cart-img.png" alt="nft del carrito">
+            <div class="item-info">
+              <h3 class="item-title">Messi</h3>
+              <p class="item-bid">Current Bid</p>
+              <span class="item-price">4.8 ETH</span>
+            </div>
+            <div class="item-handler">
+              <span class="quantity-handler down">-</span>
+              <span class="item-quantity">1</span>
+              <span class="quantity-handler up">+</span>
+            </div>
+           </div>
+           <div class="cart-item">
+            <img src="./assets/img/cart/cart-img.png" alt="nft del carrito">
+            <div class="item-info">
+              <h3 class="item-title">Messi</h3>
+              <p class="item-bid">Current Bid</p>
+              <span class="item-price">4.8 ETH</span>
+            </div>
+            <div class="item-handler">
+              <span class="quantity-handler down">-</span>
+              <span class="item-quantity">1</span>
+              <span class="quantity-handler up">+</span>
+            </div>
+           </div>
+           <div class="cart-item">
+            <img src="./assets/img/cart/cart-img.png" alt="nft del carrito">
+            <div class="item-info">
+              <h3 class="item-title">Messi</h3>
+              <p class="item-bid">Current Bid</p>
+              <span class="item-price">4.8 ETH</span>
+            </div>
+            <div class="item-handler">
+              <span class="quantity-handler down">-</span>
+              <span class="item-quantity">1</span>
+              <span class="quantity-handler up">+</span>
+            </div>
+           </div>
+           <div class="cart-item">
+            <img src="./assets/img/cart/cart-img.png" alt="nft del carrito">
+            <div class="item-info">
+              <h3 class="item-title">Messi</h3>
+              <p class="item-bid">Current Bid</p>
+              <span class="item-price">4.8 ETH</span>
+            </div>
+            <div class="item-handler">
+              <span class="quantity-handler down">-</span>
+              <span class="item-quantity">1</span>
+              <span class="quantity-handler up">+</span>
+            </div>
+           </div>
+           <div class="cart-item">
+            <img src="./assets/img/cart/cart-img.png" alt="nft del carrito">
+            <div class="item-info">
+              <h3 class="item-title">Messi</h3>
+              <p class="item-bid">Current Bid</p>
+              <span class="item-price">4.8 ETH</span>
+            </div>
+            <div class="item-handler">
+              <span class="quantity-handler down">-</span>
+              <span class="item-quantity">1</span>
+              <span class="quantity-handler up">+</span>
+            </div>
+           </div>
+          
+             <!-- Divider -->
+           <span class="divider"></span>
+
+           <!-- Total -->
+            <div class="cart-total">
+              <p>Total:</p>
+              <span>18.3 ETH</span>
+            </div>
+
+            <!-- Comprar -->
+            <button class="btn-add">Comprar</button>
+        </div>
       </nav>
     </header>
 

@@ -1,0 +1,201 @@
+/* Tablet */
+
+@media (max-width:992px) {
+
+    /* Header */
+
+    .navbar{
+        gap: 15px;
+    }
+
+    .cart-icon{
+        height: 23px;
+        margin-right: 4px;
+        margin-top: 2px;
+    }
+    .navbar-list{
+        position: absolute;
+        top: 65px;
+        left: 5% ;
+        right: 5%;
+        width: 90%;
+        flex-direction: column;
+        align-items: start;
+        background-color: var(--nav-bg);
+        border: 2px solid var(--electric);
+        border-top: 0 ;
+        border-radius: 0px 0px 15px 15px;
+        padding: 45px 30px;
+        gap: 25px;
+        display: none;
+    }
+
+    .navbar-list a{
+        font-size: 18px;
+    }
+
+    .menu-label{ /*Mostramos el icono del menú*/
+        display: flex;
+        cursor: pointer;
+        order: 2;
+    }
+
+    .menu-label img{
+        height: 20px;
+        width: 25px;
+    }
+
+    #menu-toggle:checked + .navbar-list{
+        display: flex;
+    }
+    
+    /* INFO */
+
+    .hero-info{
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .hero-card{
+        display: none;
+    }
+
+    .hero-info h1{
+        width: 90%;
+        max-width: 500px;
+        min-width: unset; /*quiamos el min-width*/
+    }
+
+    .hero-info p {
+        width: 60%;
+        max-width: 600px;
+    }
+
+    #info h2{
+        text-align: center;
+        width: 80%;
+    }
+
+    .info-cards-container{
+        max-width: 80%;
+    }
+
+    #discover{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .discover-info{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .discover-cards{
+        flex-direction: column;
+    }
+
+    .discover-cards img{
+        width: 100%;
+    }
+
+    .categories{
+        flex-wrap: wrap;
+        max-width: 390px;
+    }
+
+    .category{
+        width: 120px;
+    }
+
+
+    .products-container{
+        justify-content: center;
+    }
+}
+
+@media (max-width:576px) {
+    /* Carrito */
+    .cart{
+        left: 0;
+        width: 100%;
+        border: none;
+    }
+
+    .cart-item{
+        flex-wrap: wrap;
+    }
+    /* INFO */
+
+    .hero-info p{
+        width: 70%;
+        max-width: unset;
+    }
+
+    .info-card{
+        width: 100%;
+        height: 350px;
+        justify-content: center;
+    }
+
+    .info-card p{
+        width: 90%;
+    }
+
+    #discover{
+        width: 80%;
+    }
+
+    #discover h2{
+        font-size: 48px;
+        width: 100%;
+    }
+
+    .discover-text{
+        width: 100%;
+        padding: 10px;
+        gap: 50px;
+        line-height: 30px;
+    }
+
+    .discover-text a{
+        font-size: 20px;
+    }
+
+
+    .discover-cards{
+        gap: 20px;
+    }
+
+    .discover-cards img{
+        width: 100%;
+    }
+
+    /* Products */
+
+    .categories{
+        max-width: 300px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .category{
+        width: 120px;
+    }
+
+    .products-container{
+        width: 80%;
+    }
+
+    /* Footer */
+
+    .footer-links{
+        flex-direction: column;
+        text-align: center;
+    }
+}

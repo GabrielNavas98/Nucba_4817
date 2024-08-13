@@ -20,6 +20,9 @@
     /* Decoration */
     --fire: #ff6d00;
     --electric: #64d3ff;
+    --to-gradient: #121e3c;
+    --lightblue:#10cfd0;
+    --pink: #c33ad6;
 }
 
 
@@ -36,7 +39,8 @@
 
 /*================= HEADER ====================*/
  header{
-    background-color: var(--secondary);
+    /* background-color: var(--secondary); */
+    background: linear-gradient(to bottom, var(--to-gradient), var(--background)); /*Cambiamo el background del header*/
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -86,6 +90,125 @@
 .logo{
     height: 40%;
 }
+/*================= Carrito ====================*/
+
+#cart-toggle, 
+#menu-toggle, 
+.menu-label{
+    display: none;
+}
+
+
+.cart{
+    position: absolute;
+    right: 0;
+    top: 65px;
+    background: linear-gradient(to top, var(--to-gradient), var(--background));
+    padding: 50px 30px;
+    border-left: 1px solid var(--nav-bg);
+    height: calc(100vh - 65px);
+
+    /* display: flex;  lo sacamos por que no queremos que se vea*/
+    flex-direction: column;
+    gap: 30px;
+    justify-content: start;
+
+    overflow-y: scroll;
+    scrollbar-color: #121e3c var(--lightblue);
+    scrollbar-width: none;
+
+    display: none;
+}
+
+.cart h2{
+    color: var(--text-white);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.cart-icon{
+    cursor: pointer;
+}
+
+.cart-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid var(--electric);
+    border-radius: 10px;
+    background: #23232375;
+}
+
+.item-title{
+    color: var(--text-white);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.item-bid{
+    color: var(--text-gray);
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.item-price{
+    background: linear-gradient(to right, var(--lightblue), var(--pink));
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-weight: 800;
+}
+
+.item-handler{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.quantity-handler{
+    color: var(--text-white);
+    padding: 2px 8px;
+    border: 1px solid var(--electric);
+    border-radius: 5px;
+}
+
+.down{
+    background-color: var(--secondary);
+}
+
+.item-quantity{
+    color: var(--text-gray);
+}
+
+.divider{
+    margin-top: 20px;
+    border: 0.5px solid var(--electric);
+}
+
+.cart-total{
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-white);
+}
+
+.cart-total p{
+    font-weight: 700;
+}
+
+.cart-total span{
+    font-size: 18px;
+}
+
+
+/* ACA hacemos magía */
+
+#cart-toggle:checked + .cart{
+    display: flex;
+}
 
 /*================= MAIN ====================*/
 
@@ -125,6 +248,12 @@ main{
     font-weight: 800;
     width: 80%;
     min-width: 500px;
+
+    /* Gradiente del h1 */
+    background: linear-gradient(to top, var(--lightblue), var(--pink));
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
 }
 
 .hero-info p{
@@ -249,6 +378,7 @@ main{
     display: flex;
     gap: 20px;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .info-card{
