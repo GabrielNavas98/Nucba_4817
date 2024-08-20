@@ -1,0 +1,247 @@
+.caja{
+    width: 200px;
+    height: 200px;
+    background: crimson;
+    border-radius: 1rem;
+}
+
+/* Translate */
+
+.translateX{
+    animation: translateX 1s infinite;
+}
+
+@keyframes translateX {
+    0%{
+        transform: translateX(0);   
+    }
+    100%{
+        transform: translateX(20px);
+    }
+}
+
+.translateY{
+    animation: translateY 2s infinite;
+}
+
+@keyframes translateY {
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(20px);
+    }
+}
+
+.translate{
+    animation: translate 2s infinite    ;
+}
+
+@keyframes translate {
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(10px, 20px);
+    }
+}
+
+/* Rotate */
+
+.rotate{
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.rotate-negative{
+    animation: rotate-negative 2s infinite;
+    background-color: skyblue;
+}
+
+@keyframes rotate-negative {
+    to{
+        transform: rotate(-360deg);
+    }
+}
+
+/* Scale */
+
+.scaleX{
+    animation: scaleX 2s infinite;
+    background-color: skyblue;
+}
+
+@keyframes scaleX {
+    from{
+        transform: scaleX(1);
+    }
+    to{
+        transform: scaleX(1.1);
+    }
+}
+
+
+.scaleY{
+    animation: scaleY 2s infinite;
+}
+
+@keyframes scaleY {
+    from{
+        transform: scaleY(1);
+    }
+    to{
+        transform: scaleY(1.1);
+    }
+}
+.scale{
+    animation: scale 2s infinite;
+}
+
+@keyframes scale {
+    from{
+        transform: scale(1, 1);
+    }
+    to{
+        transform: scale(1.1, 1.2);
+    }
+}
+
+
+/* Skew */
+
+@keyframes skewX {
+    from{
+        transform: skewX(0deg);
+    }
+    to{
+        transform: skewX(10deg);
+    }
+}
+
+.skewX{
+    animation: skewX 1s infinite;
+}
+
+@keyframes skewY {
+    from{
+        transform: skewY(0deg);
+    }
+    to{
+        transform: skewY(10deg);
+    }
+}
+
+.skewY{
+    animation: skewY 1s infinite;
+}
+
+@keyframes skew {
+    0%{
+        transform: skew(0deg, 0deg);
+    }
+    100%{
+        transform: skew(10deg, 10deg);
+    }
+}
+.skew{
+    animation: skew 1s infinite;
+}
+
+/* Transition */
+
+.transition:hover{
+    background-color: skyblue;
+    width: 100px;
+    height: 100px;
+}
+
+.transition{
+    transition-property: all;
+    transition-duration: 1s;
+}
+
+/* Transition-timing-function */
+.transition-timing{
+    transition-property: all ;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(.58,.61,.43,.47);
+    background-color: skyblue;
+}
+.transition-timing:hover{
+    background-color: crimson;
+    transform: rotate(20deg);
+}
+
+/* Delay */
+
+.transition-delay{
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+.transition-delay:hover{
+    background-color: skyblue;
+    width: 100px;
+    height: 100px;
+    transform: rotate(360deg);
+    transition-delay: 1s;
+}
+
+.transition-shorthand{
+    transition: all 1s 1s ease; /*property | duration | delay(opcional) | timing-function*/
+}
+.transition-shorthand:hover{
+    background-color: skyblue;
+}
+
+/* PASo a paso para una animacion */
+
+.animada{
+    animation-name: moverCaja;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes moverCaja {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(500px);
+    }
+}
+
+.alternate{
+    animation-direction: alternate;
+}
+
+.delay{
+    animation-delay: 2s;
+}
+
+.timing-function-ease{
+    animation-timing-function: ease;
+}
+
+.timing-function{
+    animation-timing-function: ease-out;
+}
+
+.paused{
+    animation-play-state: running;
+}
+
+.paused:hover{
+    animation-play-state: paused;
+}
