@@ -4,8 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing Page NFT</title>
+    <!-- Estilos principales -->
     <link rel="stylesheet" href="./assets/styles.css" />
+    <!-- Estilos de mediaqueries Responsive -->
     <link rel="stylesheet" href="./assets/mediaqueries.css">
+    <!-- Estilos de animaciones -->
+     <link rel="stylesheet" href="./assets/animaciones.css">
+    <!-- Linkeamos FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+
+
+    <!-- Agregamos favicon -->
+     <link rel="icon" href="./assets/img/favicons/favicon-16x16.png">
   </head>
   <body>
     <!--Header-->
@@ -19,7 +29,7 @@
         </label>
         <input type="checkbox" id="menu-toggle">
         <ul class="navbar-list">
-          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#hero">Home</a></li>
           <li><a href="#discover">Descubre</a></li>
           <li><a href="#products">BTC</a></li>
           <li><a href="#">Youtube</a></li>
@@ -27,11 +37,13 @@
         </ul>
         <!--Cart Toggle-->
         <label for="cart-toggle">
-          <img
+          <!-- <img
           src="./assets/img/cart-icon.svg"
           alt="Logo carrito"
           class="cart-icon"
-        />
+        /> -->
+        <!-- Icono de FontAwesome -->
+        <i class="fa-solid fa-cart-shopping cart-icon"></i>
         </label>
         <input type="checkbox" id="cart-toggle">
         <!-- Carrito list -->
@@ -117,6 +129,9 @@
             <!-- Comprar -->
             <button class="btn-add">Comprar</button>
         </div>
+
+        <!-- Div vacio para el overlay -->
+         <div class="overlay"></div>
       </nav>
     </header>
 
@@ -126,7 +141,7 @@
       <section id="hero">
         <!--HeroINFO-->
         <div class="hero-info">
-          <h1>Descubre la nueva era de Crypto</h1>
+          <h1>Descubre la nueva era de <span>Crypto</span></h1>
           <p>
             NUCBA NFT es el primer Marketplace educativo tecnológico de NFT, que
             son elementos digitales épicos que realmente puedes poseer. Los

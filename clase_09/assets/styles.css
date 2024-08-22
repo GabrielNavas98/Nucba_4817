@@ -61,6 +61,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 2;
 }
 
 .navbar{
@@ -117,7 +118,11 @@
     scrollbar-color: #121e3c var(--lightblue);
     scrollbar-width: none;
 
-    display: none;
+    /* display: none; se lo sacamos para animarlo clase 16*/
+    display: flex;
+    translate: 200%; /*areviación de transform:translate(200%)*/
+    transition: all 0.5s ease-in-out;
+    z-index: 2;
 }
 
 .cart h2{
@@ -128,6 +133,8 @@
 
 .cart-icon{
     cursor: pointer;
+    font-size: 1rem;
+    color: var(--text-white);
 }
 
 .cart-item{
@@ -207,7 +214,7 @@
 /* ACA hacemos magía */
 
 #cart-toggle:checked + .cart{
-    display: flex;
+    translate: 0;
 }
 
 /*================= MAIN ====================*/

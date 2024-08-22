@@ -1,0 +1,213 @@
+/* animación smooth con vinculos ancla */
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 65px; /*para cuando apretemos en el link, el header no nos cubra la seccion (altura del heaeder 65px)*/
+}
+
+/* Glassmorphismo:
+Básicamente, el concepto principal de esta tendencia es poner un fondo semitransparente que añade un difuminado al fondo del div en el que se aplique. En este caso, lo usamos para que al abrir el menú hamburguesa y el carrito lo demás de la página se vea borroso abajo de este div de clase overlay.
+*/
+
+.overlay{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 65px;
+    left: 0;
+    z-index: 1;
+    /* Efecto glassmorphismo */
+    background: rgba( 255, 255, 255, 0.1 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    display: none;
+    transition: all 0.5s ease;
+}
+
+#cart-toggle:checked ~ .overlay,
+#menu-toggle:checked ~ .overlay{
+    display: block;
+}
+
+/* Hover a los li del navbar */
+
+.navbar-list li{
+    position: relative;
+    padding: 0;
+}
+
+.navbar-list li a::after{
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: var(--text-white);
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.15s ease;
+    transform-origin: bottom right;
+}
+
+.navbar-list li a:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Carrito hover */
+.cart-icon{
+    transition: all 0.2s ease-in-out;
+}
+
+.cart-icon:hover{
+    color: var(--electric);
+    border-color: var(--electric);
+}
+/* boton de sumar y restar cantidad en el carrito */
+.quantity-handler:hover{
+    cursor: pointer;
+    background-color: var(--electric);
+}
+
+.quantity-handler{
+    transition: all 0.2s ease-out;
+}
+
+.btn-add:hover,
+.hero-info a:hover{
+    background-color: var(--fire);
+}
+
+.btn-add, .hero-info a{
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-load:hover{
+    background-color: var(--electric);
+    color: var(--text-white);
+}
+
+.btn-load{
+    transition: all 0.2s ease-in-out;
+}
+
+/* Animaciones */
+
+/* Fade */
+/* elemento desde opacity 0 a 1 */
+@keyframes fade {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+/* Slide up hacemos llegar el elemento animado desde abajo */
+@keyframes slide-up {
+    from{
+        transform: translateY(100px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+/* Hacemos llegar el elemento animado desde la derecha */
+@keyframes slide-right {
+    from{
+        transform: translateX(100px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+/* animamos el h1 */
+
+.hero-info h1{
+    /* animación - duración - animation-function */
+    animation: fade 1s ease-in, slide-up 1.3s ease-in-out;
+}
+
+.hero-info p{
+    opacity: 0;
+    animation: fade 0.8s ease-in forwards, slide-up 0.9s ease-in-out;
+    animation-delay: 0.3s ;
+}
+
+.hero-info a{
+    opacity: 0;
+    animation: fade 0.8s ease-in forwards, slide-up 0.9s ease-in-out;
+    animation-delay: 0.4s;
+}
+
+.hero-card{
+    opacity: 0;
+    animation: fade 1s ease-in forwards, slide-right 1.3s ease-in-out;
+    animation-delay: 0.2;
+}
+
+/* animacion seccion 2 */
+#info h2{
+    opacity: 0;
+    animation: fade 0.8s ease-in forwards, slide-up 0.9s ease-in-out;
+    animation-delay: .4s;
+}
+
+.info-card{
+    opacity: 0;
+    animation: fade 0.8s ease-in forwards, slide-up 1.3s ease-in-out;
+}
+
+.info-card:nth-child(1){
+    animation-delay: 0.8s;
+}
+.info-card:nth-child(2){
+    animation-delay: 0.7s;
+}
+.info-card:nth-child(3){
+    animation-delay: 1s;
+}
+
+/* Animaccion Typing  efecto de escritura*/
+/* efecto de titilar */
+@keyframes blink {
+    to{
+        background: transparent;
+        opacity: 0;
+    }
+}
+@keyframes typewriter {
+    to{
+        left: 100%;
+    }
+}
+
+.hero-info h1 span{
+    position: relative;
+    background: linear-gradient(to top, var(--lightblue), var(--pink));
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+.hero-info h1 span::before,
+.hero-info h1 span::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+/* para que las letras aperazcan de apoco usamos steps */
+.hero-info h1 span::before{
+    background-color: var(--background);
+    animation: typewriter 1.2s 1.4s steps(6) forwards;
+}
+/* para que la barrita vayan "tipeando" y titilee */
+.hero-info h1 span::after{
+    width: 0.1rem;
+    background: linear-gradient(to top, var(--lightblue), var(--pink));
+    animation: typewriter 1.2s 1.4s steps(6) forwards, blink 0.8s steps(6) infinite;
+}
