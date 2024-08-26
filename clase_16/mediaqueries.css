@@ -1,0 +1,31 @@
+/* Max width para desktop-first de ahi para abajo */
+/* Tablet */
+@media (max-width: 768px) {
+    .content{
+        flex-direction: column;
+    }
+
+    aside{
+        width: 100%;
+        order: 1;
+        max-width: inherit;
+        flex-grow: 1;
+    }
+    main{
+        order: 2;
+        flex-grow: 7;
+        color: red;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar{
+        display: none;
+    }
+    .btn_menu{
+        display: block;
+    }
+    aside{
+        display: none;
+    }
+}
