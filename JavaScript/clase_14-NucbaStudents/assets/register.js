@@ -13,6 +13,7 @@ const users = JSON.parse(localStorage.getItem('users')) || []
 const saveToLocalStorage = () =>{
     localStorage.setItem('users', JSON.stringify(users))
 }
+
 const isEmpty = (input) => {
     return !input.value.trim().length
 }
