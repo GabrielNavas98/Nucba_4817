@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background: rgb(21, 32, 43);
+  background: linear-gradient(
+    190deg,
+    rgba(34, 37, 74, 1),
+    rgba(21, 32, 43, 1) 58%
+  );
+  height: 100%;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 5%;
+}
+
+.container {
+  background-color: #15202b80;
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 40px 30px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 36px;
+  color: rgb(116, 127, 140);
+}
+
+footer span {
+  color: #ceb02c;
+  font-weight: 800;
+}
+
+/* Contenedor flexible para las tarjetas */
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* Espaciado entre las cards */
+  justify-content: center; /* Centra las cards */
+  padding: 16px; /* Espaciado interno */
+  margin: 0 auto; /* Centra el contenedor */
+  max-width: 1200px; /* Ancho máximo del contenedor */
+}
+
+/* Ajusta el tamaño según la pantalla */
+@media (max-width: 768px) {
+  .game-card {
+    max-width: 100%;
+  }
+}
+/* Contenedor principal de la tarjeta */
+.game-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  max-width: 300px;
+  margin: 16px;
+  font-family: Arial, sans-serif;
+}
+
+/* Efecto hover */
+.game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen del juego */
+.game-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Información del juego */
+.game-info {
+  padding: 16px;
+  text-align: center;
+}
+
+/* Título del juego */
+.game-title {
+  font-size: 18px;
+  margin: 0 0 8px;
+  color: #333;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Rating */
+.game-rating {
+  font-size: 14px;
+  color: #666;
+}
+
+.loading-container {
+  display: none; /* Oculto por defecto */
+  text-align: center;
+  font-size: 18px;
+  color: #ceb02c;
+  margin: 20px 0;
+}
+
+.loading-container p {
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
