@@ -4,10 +4,10 @@ const gamesContainer = document.querySelector(".cards-container");
 const loading = document.querySelector(".loading-container");
 
 const crearTemplateGame = (game) => {
-  const { name, rating, background_image } = game;
+  const { name, rating, background_image, id} = game;
 
   return `
-    <div class="game-card" >
+    <div class="game-card"  >
       <img
         src="${background_image}"
         alt="${name}"
