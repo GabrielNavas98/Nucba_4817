@@ -1,38 +1,21 @@
 import { Button, LoginContainer, LoginForm } from './LoginStyles';
 import { Card } from '../Products/ProductsStyles';
-import { useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../context/AuthContext';
 
-const initialValues = {
-  username: '',
-  password: ''
-}
 
 const Login = () => {
 
+  const { handleSubmit, handleChange, form, isAuth} = useContext(AuthContext)
+
   const navigate = useNavigate()
 
-  const [form, setForm] = useState(initialValues)
-
-  const handleChange = (e) => {    
-    setForm({
-      ...form,
-      [e.target.name]: e.target.value
-    })    
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-
-    if(!form.username.trim() || !form.password.trim()){
-      alert('ingresa los datos')
-      return
+  useEffect(() => {
+    if(isAuth){
+      navigate('/')
     }
-
-    navigate(`/user/${form.username}`)
-    
-    setForm(initialValues)
-  }
+  }, [navigate, isAuth])
 
   return (
     <LoginContainer>
@@ -48,6 +31,7 @@ const Login = () => {
             id='username'
             name='username'
             onChange={handleChange}
+            value={form.username}
           />
           <input
             type='password'
@@ -55,6 +39,7 @@ const Login = () => {
             id='password'
             name='password'
             onChange={handleChange}
+            value={form.password}
           />
           <Button type='submit' onClick={handleSubmit}>
             Login

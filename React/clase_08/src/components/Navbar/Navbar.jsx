@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { LinkContainer, Logo, NavbarContainer, NavLinkStyled } from './NavbarStyles';
+import { AuthContext } from '../../context/AuthContext';
 
 const Navbar = () => {
-  
+
+  const {isAuth, user} = useContext(AuthContext)
+
+
   return (
     <NavbarContainer>
       <Logo>
@@ -15,7 +19,9 @@ const Navbar = () => {
       <LinkContainer>
         <NavLinkStyled to='/'>Home</NavLinkStyled>
         <NavLinkStyled to='/products'>Productos</NavLinkStyled>
-        <NavLinkStyled to='/login'>Login</NavLinkStyled>
+        <NavLinkStyled to={isAuth ? `/user/${user}` : '/login'}>
+          {isAuth ? 'Perfil' : 'Login'}
+        </NavLinkStyled>
       </LinkContainer>
     </NavbarContainer>
   );
