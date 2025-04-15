@@ -1,3 +1,4 @@
+import { useDispatch } from "react-redux";
 import { formatPrice } from "../../utils/index";
 
 import Button from "../UI/Button/Button";
@@ -7,8 +8,11 @@ import {
   ContainerPrice,
   ProductosCard,
 } from "./CardsProductosStyles";
+import { addToCart } from "../../redux/cart/cartSlice";
 
-const CardProducto = ({title, img, price, desc}) => {
+const CardProducto = ({title, img, price, desc, id}) => {
+
+  const dispatch = useDispatch()
   return (
     <ProductosCard>
       <img
@@ -19,7 +23,7 @@ const CardProducto = ({title, img, price, desc}) => {
       <p>{desc}</p>
       <ContainerPrice>
         <CardPrice>{formatPrice(price)}</CardPrice>
-        <Button onClick={(e) => e.preventDefault()}>Agregar</Button>
+        <Button onClick={() => dispatch(addToCart({title, img, price, desc, id}))}>Agregar</Button>
       </ContainerPrice>
     </ProductosCard>
   );

@@ -20,13 +20,12 @@ import {
 } from "./NavbarStyles";
 
 function Navbar() {
-  const [hiddenCart, setHiddenCart] = useState(true);
 
   const navigate = useNavigate();
 
   return (
     <NavbarContainerStyled>
-      <ModalCart hiddenCart={hiddenCart} setHiddenCart={setHiddenCart} />
+      <ModalCart />
       <ModalUser />
       <div>
         <Link to="/">
@@ -47,7 +46,7 @@ function Navbar() {
         </motion.div>
 
         <CartNavStyled>
-          <CartIcon hiddenCart={hiddenCart} setHiddenCart={setHiddenCart} />
+          <CartIcon />
         </CartNavStyled>
 
         <UserNavStyled>

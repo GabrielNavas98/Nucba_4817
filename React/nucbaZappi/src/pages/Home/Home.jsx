@@ -19,6 +19,7 @@ function Home() {
     const coordY = productsRef.current.getBoundingClientRect().y
     window.scrollTo(coordX, coordY)
   }
+  
   return (
     <HomeWrapper>
       {/* Hero Section */}
