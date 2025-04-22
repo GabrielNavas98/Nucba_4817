@@ -9,9 +9,27 @@ import {
   MisOrdenesPatternStyled,
   MisOrdenesTitleStyled,
 } from "./MisOrdenesStyles";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { getOrders } from "../../axios/axios-orders";
+import { clearError, fetchOrdersFail } from "../../redux/orders/orderSlice";
 
 const MisOrdenes = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch()
+  const currentUser = useSelector(state => state.user.currentUser)
+  const {orders, error} = useSelector(state => state.orders)
+
+  useEffect(() => {
+    if(!orders){
+      getOrders(dispatch, currentUser)
+    }
+    if(!currentUser.token){
+      dispatch(fetchOrdersFail())
+    }else{
+      error && dispatch(clearError())
+    }
+  }, [dispatch, orders, currentUser, error])
 
   return (
     <>
